@@ -2,4 +2,4 @@ kind: Namespace
 apiVersion: v1
 metadata:
   labels:
-  name: robot-namespace
+  name: ahaz-namespace
