@@ -1,0 +1,40 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  labels:
+  name: robot-namespace
+---
+kind: Deployment
+apiVersion: v1
+metadata:
+  name: robot_deployment
+  namespace: robot-namespace
+spec:
+  selector:
+    matchLabels:
+      app: robot_application
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: robot_application
+    spec:
+      containers:
+      - name: robot_container
+        image: cddirector/sampleapp:1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: sampleapp-service
+  namespace: sampleapps
+spec:
+  ports:
+  - protocol: TCP
+    port: 8080
+selector:
+  app: sampleapp
