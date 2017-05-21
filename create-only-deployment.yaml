@@ -4,7 +4,7 @@ metadata:
   name: ahaz-deployment
   namespace: ahaz-namespace
 spec:
-  progressDeadlineSeconds: 30
+  progressDeadlineSeconds: 10
   selector:
     matchLabels:
       app: ahaz-application
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ahaz-container
-        image: cddirector/sampleapp:1
+        image: cddirector/sampleapp:7
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
