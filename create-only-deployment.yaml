@@ -4,8 +4,9 @@ metadata:
   name: ahaz-deployment
   namespace: ahaz-namespace
 spec:
+  progressDeadlineSeconds: 30
   selector:
-    matchLabels:
+    matchLabels:: 30
       app: ahaz-application
   replicas: 1
   template:
