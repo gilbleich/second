@@ -6,7 +6,7 @@ metadata:
 spec:
   progressDeadlineSeconds: 30
   selector:
-    matchLabels:: 30
+    matchLabels:
       app: ahaz-application
   replicas: 1
   template:
