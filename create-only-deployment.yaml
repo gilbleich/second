@@ -2,6 +2,7 @@ kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
   name: demo-deployment
+  namespace: demo-namespace
 spec:
   progressDeadlineSeconds: 10
   selector:
