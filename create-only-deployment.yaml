@@ -19,7 +19,8 @@ spec:
         image: cddirector/sampleapp:1
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - name: api
+          containerPort: 8080
           protocol: TCP
 ---
 kind: Service
@@ -29,7 +30,8 @@ metadata:
   namespace: demo-namespace
 spec:
   ports:
-  - protocol: TCP
+  - name: api
+    protocol: TCP
     port: 8080
 selector:
   app: demo-application
