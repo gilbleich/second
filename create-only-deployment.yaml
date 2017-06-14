@@ -1,22 +1,21 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
-  name: ahaz-deployment
-  namespace: ahaz-namespace
+  name: demo-deployment
 spec:
   progressDeadlineSeconds: 10
   selector:
     matchLabels:
-      app: ahaz-application
+      app: demo-application
   replicas: 1
   template:
     metadata:
       labels:
-        app: ahaz-application
+        app: demo-application
     spec:
       containers:
       - name: ahaz-container
-        image: cddirector/sampleapp:7
+        image: cddirector/sampleapp:1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
