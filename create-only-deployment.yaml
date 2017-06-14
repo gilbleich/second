@@ -33,5 +33,5 @@ spec:
   - name: api
     protocol: TCP
     port: 8080
-selector:
-  app: demo-application
+  selector:
+    app: demo-application
