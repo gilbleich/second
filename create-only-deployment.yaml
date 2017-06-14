@@ -14,7 +14,7 @@ spec:
         app: demo-application
     spec:
       containers:
-      - name: ahaz-container
+      - name: demo-container
         image: cddirector/sampleapp:1
         imagePullPolicy: Always
         ports:
