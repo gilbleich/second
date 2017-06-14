@@ -21,3 +21,15 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo-service
+  namespace: demo-namespace
+spec:
+  ports:
+  - protocol: TCP
+    port: 8080
+selector:
+  app: demo-application
